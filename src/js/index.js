@@ -19,7 +19,10 @@ const createAnimation = (start, end, duration, callback) => {
       top: `${end.top}px`,
       left: `${end.left}px`,
     }
-  ], duration);
+  ], {
+    duration,
+    easing: 'ease-out',
+  });
 
   animation.onfinish = () => {
     state.elements.animation.style = {
@@ -60,7 +63,7 @@ document.addEventListener('DOMContentLoaded', event => {
     top: -areaDiagonal,
     left: -areaDiagonal,
   };
-  const duration = 400;
+  const duration = 500;
 
   state.elements.button.addEventListener('change', el => {
     if (el.target.checked) {
