@@ -5,7 +5,7 @@ import '../css/style.css';
 
 let state = {};
 
-const createAnimation = (start, end, duration, callback) => {
+const backgroundAnimation = (start, end, duration, callback) => {
   state.elements.area.style.background = '#fff';
   state.elements.animation.style.opacity = 1;
 
@@ -70,11 +70,11 @@ document.addEventListener('DOMContentLoaded', event => {
 
   state.elements.button.addEventListener('change', el => {
     if (el.target.checked) {
-      createAnimation(start, end, duration, () => {
+      backgroundAnimation(start, end, duration, () => {
         state.elements.area.style.background = '#53b300';
       });
     } else {
-      createAnimation(end, start, duration);
+      backgroundAnimation(end, start, duration);
     }
   });
 });
