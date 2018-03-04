@@ -4,8 +4,15 @@
   overflow: hidden;
 }
 
+
+h1, p {
+  position: relative;
+  z-index: 100;
+}
+
 .check {
   position: relative;
+  z-index: 50;
 }
 
 input[type=checkbox] {

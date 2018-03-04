@@ -1,3 +1,5 @@
+// https://dribbble.com/shots/1749645-Contact-Sync
+
 import 'web-animations-js/web-animations-next.min.js'
 import '../css/style.css';
 
@@ -6,6 +8,7 @@ let state = {};
 const createAnimation = (start, end, duration, callback) => {
   state.elements.area.style.background = '#fff';
   state.elements.animation.style.opacity = 1;
+
   const animation = state.elements.animation.animate([
     {
       width: `${start.width}px`,
