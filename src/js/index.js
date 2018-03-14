@@ -25,19 +25,20 @@ const backgroundAnimation = (start, end, duration, callback) => {
   ], {
     duration,
     easing: 'ease-out',
+    fill: 'forwards',
   });
 
-  animation.onfinish = () => {
-    state.elements.animation.style = {
-      width: `${end.width}px`,
-      height: `${end.width}px`,
-      top: `${end.top}px`,
-      left: `${end.top}px`,
-      opacity: 0,
-    };
-
-    if (callback) callback();
-  };
+  // animation.onfinish = () => {
+  //   state.elements.animation.style = {
+  //     width: `${end.width}px`,
+  //     height: `${end.width}px`,
+  //     top: `${end.top}px`,
+  //     left: `${end.top}px`,
+  //     opacity: 0,
+  //   };
+  //
+  //   if (callback) callback();
+  // };
 };
 
 document.addEventListener('DOMContentLoaded', event => {
